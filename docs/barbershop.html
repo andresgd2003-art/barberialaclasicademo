@@ -19,8 +19,8 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            background-color: #1a1a1a; /* Match body background */
-            z-index: -1; /* Behind other content */
+            background-color: #1a1a1a;
+            z-index: -1;
         }
         .navbar {
             background-color: #000;
@@ -41,20 +41,19 @@
             height: 120px;
         }
         .review-name {
-            color: #f5f5dc !important; /* Beige color */
+            color: #f5f5dc !important;
         }
         .hero {
             position: relative;
             background: url('images/hero-background.jpg') no-repeat center center;
             background-size: cover;
-            /* Ajuste para móvil: min-height en lugar de height fijo */
-            min-height: 80vh; /* Ajusta la altura mínima para que tenga espacio */
-            padding-top: 100px; /* Espacio para el navbar fijo */
-            padding-bottom: 50px; /* Espacio inferior */
+            min-height: 80vh;
+            padding-top: 100px;
+            padding-bottom: 50px;
             color: white;
-            display: flex; /* Asegura que el contenido se centre verticalmente */
-            align-items: center; /* Centra verticalmente */
-            text-align: center; /* Centra el texto */
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
         .hero-overlay {
             position: absolute;
@@ -71,25 +70,25 @@
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4.5rem;
-            margin-bottom: 0.5rem; /* Espacio entre título y lead */
+            margin-bottom: 0.5rem;
         }
         .hero .lead {
-            font-size: 1.5rem; /* Tamaño de fuente para el texto descriptivo */
-            margin-bottom: 2rem; /* Espacio entre lead y botón */
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .hero {
-                min-height: 70vh; /* Ajusta la altura mínima para móviles */
-                padding-top: 80px; /* Menos padding superior en móviles */
-                padding-bottom: 30px; /* Menos padding inferior en móviles */
+                min-height: 80vh; /* Ajuste para que se vea más grande en móviles */
+                padding-top: 100px;
+                padding-bottom: 50px;
             }
             .hero h1 {
-                font-size: 2.8rem; /* Tamaño de fuente más grande para móviles */
+                font-size: 3.5rem; /* Título principal más grande para móviles */
             }
             .hero .lead {
-                font-size: 1.2rem; /* Tamaño de fuente para el lead en móviles */
+                font-size: 1.3rem; /* Subtítulo más grande para móviles */
             }
             .navbar-nav {
                 text-align: center;
@@ -97,8 +96,23 @@
             .navbar-nav .nav-item {
                 margin-bottom: 10px;
             }
-            h2 { /* Títulos de sección más grandes en móvil */
-                font-size: 2rem;
+            h2 {
+                font-size: 2.2rem; /* Títulos de sección más grandes */
+            }
+            .col-6.mb-4 {
+                width: 100%; /* Las imágenes de la galería ocuparán el 100% del ancho */
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+            .col-md-3.col-6.mb-4 img {
+                width: 100%;
+                height: auto;
+            }
+            .card {
+                margin-bottom: 1.5rem !important; /* Más espacio entre tarjetas */
+            }
+            .col-md-4 {
+                margin-bottom: 1.5rem !important; /* Más espacio entre columnas de servicios */
             }
         }
         .card {
@@ -242,16 +256,16 @@
             </div>
             <h3 class="text-center mt-5" data-aos="fade-up">Galería del Local</h3>
             <div class="row mt-4">
-                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up">
+                <div class="col-12 col-md-3 mb-4" data-aos="zoom-in-up">
                     <img src="images/local1.jpg" class="img-fluid" alt="Local 1">
                 </div>
-                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up" data-aos-delay="100">
+                <div class="col-12 col-md-3 mb-4" data-aos="zoom-in-up" data-aos-delay="100">
                     <img src="images/local2.jpg" class="img-fluid" alt="Local 2">
                 </div>
-                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up" data-aos-delay="200">
+                <div class="col-12 col-md-3 mb-4" data-aos="zoom-in-up" data-aos-delay="200">
                     <img src="images/local3.jpg" class="img-fluid" alt="Local 3">
                 </div>
-                <div class="col-md-3 col-6 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="col-12 col-md-3 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
                     <img src="images/local4.jpg" class="img-fluid" alt="Local 4">
                 </div>
             </div>
@@ -436,7 +450,7 @@
                     }
                 },
                 "color": {
-                    "value": "#b08d57" /* Gold/bronze accent color */
+                    "value": "#b08d57"
                 },
                 "shape": {
                     "type": "circle",
