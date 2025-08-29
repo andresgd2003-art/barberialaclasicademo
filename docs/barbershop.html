@@ -47,8 +47,14 @@
             position: relative;
             background: url('images/hero-background.jpg') no-repeat center center;
             background-size: cover;
-            height: 100vh;
+            /* Ajuste para móvil: min-height en lugar de height fijo */
+            min-height: 80vh; /* Ajusta la altura mínima para que tenga espacio */
+            padding-top: 100px; /* Espacio para el navbar fijo */
+            padding-bottom: 50px; /* Espacio inferior */
             color: white;
+            display: flex; /* Asegura que el contenido se centre verticalmente */
+            align-items: center; /* Centra verticalmente */
+            text-align: center; /* Centra el texto */
         }
         .hero-overlay {
             position: absolute;
@@ -65,18 +71,34 @@
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4.5rem;
+            margin-bottom: 0.5rem; /* Espacio entre título y lead */
+        }
+        .hero .lead {
+            font-size: 1.5rem; /* Tamaño de fuente para el texto descriptivo */
+            margin-bottom: 2rem; /* Espacio entre lead y botón */
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .hero {
+                min-height: 70vh; /* Ajusta la altura mínima para móviles */
+                padding-top: 80px; /* Menos padding superior en móviles */
+                padding-bottom: 30px; /* Menos padding inferior en móviles */
+            }
             .hero h1 {
-                font-size: 3rem; /* Adjusted font size for better mobile display */
+                font-size: 2.8rem; /* Tamaño de fuente más grande para móviles */
+            }
+            .hero .lead {
+                font-size: 1.2rem; /* Tamaño de fuente para el lead en móviles */
             }
             .navbar-nav {
                 text-align: center;
             }
             .navbar-nav .nav-item {
                 margin-bottom: 10px;
+            }
+            h2 { /* Títulos de sección más grandes en móvil */
+                font-size: 2rem;
             }
         }
         .card {
@@ -95,11 +117,6 @@
             background-color: #000;
             color: white;
         }
-        /* Esta es la línea que se ha eliminado:
-        .navbar-toggler {
-            display: none !important;
-        }
-        */
     </style>
 </head>
 <body>
@@ -134,7 +151,7 @@
         </div>
     </nav>
 
-    <header class="hero d-flex justify-content-center align-items-center text-center">
+    <header class="hero">
         <div class="hero-overlay"></div>
         <div class="container">
             <h1 data-aos="fade-down">La Clásica Barber Shop</h1>
