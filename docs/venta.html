@@ -156,6 +156,18 @@
                 transform: translateY(-10px);
             }
         }
+
+        @media (max-width: 767px) {
+            .phone-container {
+                height: 450px; /* Smaller height for mobile */
+                max-width: 300px; /* Smaller max-width for mobile */
+            }
+            .scroll-section {
+                min-height: auto; /* Allow content to dictate height on mobile */
+                padding-top: 2rem; /* Add some padding to the top */
+                padding-bottom: 2rem; /* Add some padding to the bottom */
+            }
+        }
     </style>
 </head>
 <body class="text-white">
