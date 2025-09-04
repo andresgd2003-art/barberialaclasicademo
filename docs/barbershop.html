@@ -15,10 +15,17 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             background-color: #1a1a1a;
             color: #f8f9fa;
             overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
         #particles-js {
             position: fixed;
@@ -76,6 +83,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 4.5rem;
             font-weight: 700;
+            line-height: 1.2; /* Adjust line height for better readability on smaller screens */
         }
         .card {
             background-color: #212529;
